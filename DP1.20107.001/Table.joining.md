@@ -1,10 +1,10 @@
-|Table 1|Table 2|Join by field(s)|
+|Table 1|Table 2|Join by field(s)|Notes|Notes|
 |------------------------|------------------------|-------------------------------|
-fsh_fieldData|fsh_perPass|reachID
+fsh_fieldData|fsh_perPass|reachID                     
 fsh_perFish|fsh_perPass|eventID
-fsh_bulkCount|fsh_perPass|eventID
-fsh_morphospecies|fsh_perFish|morphospeciesID
-fsh_morphospecies|fsh_bulkCount|morphospeciesID
+fsh_bulkCount|fsh_perPass|eventID|If using neonOS::joinTableNEON(), include input parameter location.fields=FALSE                                                         
+fsh_morphospecies|fsh_perFish|morphospeciesID|If using neonOS::joinTableNEON(), include input parameter location.fields=FALSE
+fsh_morphospecies|fsh_bulkCount|morphospeciesID|If using neonOS::joinTableNEON(), include input parameter location.fields=FALSE
 fsh_fieldData|fsh_morphospecies|Join not recommended: data can be related via date of sampling
 fsh_perPass|fsh_morphospecies|Join not recommended: data can be related via date of sampling
 fsh_bulkCount|fsh_fieldData|Requires intermediate table: join via fsh_perpass table
